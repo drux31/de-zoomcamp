@@ -16,7 +16,7 @@ docker build -t taxi_ingest:v001 .
 
 dockerizing the pipeline (-it makes it possible to kill the container from the terminal)
 
-docker run -it --network=2_docker_sql_default \
+docker run -it --network=2_docker_sql_default (docker-compose network name) \
 test:prefect \
 --user=root \
 --password=root \
@@ -32,5 +32,14 @@ For example, if docker-compose yaml file is in my_app directory, the network my_
 list all the created networks :
 docker network ls 
 
+So first : 
+create the dockerfile with content for running the data_ingestion file
+second :
+run docker-compose up
+third :
+get the name of the created network for the docker compose and use as network argument for docker run
+ 
 ---------
 To run python files with python command, the host needs to set to localhost.
+
+-----
