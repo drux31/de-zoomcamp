@@ -31,3 +31,6 @@ For example, if docker-compose yaml file is in my_app directory, the network my_
 
 list all the created networks :
 docker network ls 
+
+---------
+To run python files with python command, the host needs to set to localhost.
