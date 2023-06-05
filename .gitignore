@@ -1,0 +1,59 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.lock*
+
+# Env files #
+#############
+week_1_basics_n_setup/1_terraform_gcp/.env
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+week_1_basics_n_setup/2_docker_sql/output.csv
+week_2_workflow_orchestration/prefect_intro/output.csv
+week_1_basics_n_setup/1_terraform_gcp/google-cloud-cli-433.0.1-linux-x86_64.tar.gz
+*.tfstate
+# Folders #
+###########
+_venv/
+week_1_basics_n_setup/2_docker_sql/ny_taxi_postgres_data/
+week_1_basics_n_setup/2_docker_sql/.ipynb_checkpoints/
+week_1_basics_n_setup/2_docker_sql/ny_taxis_csv_data/
+week_1_basics_n_setup/1_terraform_gcp/google-cloud-sdk/
+week_1_basics_n_setup/1_terraform_gcp/.env_folder/
+week_1_basics_n_setup/1_terraform_gcp/.terraform/
+week_1_basics_n_setup/homework/.ipynb_checkpoints/
+week_1_basics_n_setup/1_terraform_gcp/terraform/.terraform/
+
+week_2_workflow_orchestration/prefect_intro/output.csv

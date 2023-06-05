@@ -1,0 +1,33 @@
+URL="https://storage.googleapis.com/yello-taxi-data/yellow_tripdata_2021-01.csv"
+
+python ingest_data.py \
+--user=root \
+--password=root \
+--host=localhost \
+--port=5432 \
+--db=ny_taxi \
+--table_name=yellow_taxi_data \
+--url=${URL}
+
+rebuilding the docker container after modifying the pipeline source file (replacing it with the ingest_data file)
+it may be necessary to change the owner of the pg data repository : sudo chown -R $USER ny_taxi_postgres_data/
+
+docker build -t taxi_ingest:v001 .
+
+dockerizing the pipeline (-it makes it possible to kill the container from the terminal)
+
+docker run -it --network=2_docker_sql_default \
+test:prefect \
+--user=root \
+--password=root \
+--host=pgdatabase \
+--port=5432 \
+--db=ny_taxi \
+--table_name=yellow_taxi_data \
+--url=${URL}
+
+by default, when running docker-compose up, a network conataining the app directory name is created. 
+For example, if docker-compose yaml file is in my_app directory, the network my_app_default will be created by docker.
+
+list all the created networks :
+docker network ls 
