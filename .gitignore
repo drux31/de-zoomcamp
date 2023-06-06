@@ -44,6 +44,7 @@ week_1_basics_n_setup/2_docker_sql/output.csv
 week_2_workflow_orchestration/prefect_intro/output.csv
 week_1_basics_n_setup/1_terraform_gcp/google-cloud-cli-433.0.1-linux-x86_64.tar.gz
 *.tfstate
+week_2_workflow_orchestration/etl_w_gcpn_prefect/yellow_tripdata_2021-01.parquet
 # Folders #
 ###########
 _venv/
@@ -55,5 +56,8 @@ week_1_basics_n_setup/1_terraform_gcp/.env_folder/
 week_1_basics_n_setup/1_terraform_gcp/.terraform/
 week_1_basics_n_setup/homework/.ipynb_checkpoints/
 week_1_basics_n_setup/1_terraform_gcp/terraform/.terraform/
+week_2_workflow_orchestration/.env/
+week_2_workflow_orchestration/data/
+
 
 week_2_workflow_orchestration/prefect_intro/output.csv

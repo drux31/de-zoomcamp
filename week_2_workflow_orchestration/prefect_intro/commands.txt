@@ -43,3 +43,10 @@ get the name of the created network for the docker compose and use as network ar
 To run python files with python command, the host needs to set to localhost.
 
 -----
+ETL with GCP & Prefect :
+we created during this course, a pipeline for :
+- taking data from the web ;
+- clean it locally ;
+- upload it to GCP.
+
+We completed those tasks using prefect.
