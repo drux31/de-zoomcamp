@@ -64,3 +64,7 @@ week_2_workflow_orchestration/etl_w_gcpn_prefect/data/
 week_2_workflow_orchestration/etl_w_gcpn_prefect/__pycache__/
 week_2_workflow_orchestration/prefect_intro/output.csv
 week_2_workflow_orchestration/etl_w_gcpn_prefect/flows/__pycache__/
+week_2_workflow_orchestration/etl_w_gcpn_prefect/homework/__pycache__/
+week_2_workflow_orchestration/etl_w_gcpn_prefect/homework/data/
+
+
