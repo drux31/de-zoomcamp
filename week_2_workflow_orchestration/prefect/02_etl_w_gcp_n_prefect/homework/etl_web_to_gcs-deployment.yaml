@@ -8,7 +8,7 @@ version: 466c78744610cee3bb481f02f56e3f5c
 work_queue_name: default
 work_pool_name: null
 tags: []
-parameters: {}
+parameters: {"months": [1,], "year": 2020, "color": "green"}
 schedule: null
 is_schedule_active: null
 infra_overrides: {}
