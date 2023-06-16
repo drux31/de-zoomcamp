@@ -5,11 +5,11 @@ ENV AIRFLOW_HOME=/opt/airflow
 USER root
 RUN apt-get update -qq && apt-get install vim -qqq
 
-COPY requirements.txt .
-
 # adding airflow user for pip
 USER airflow
-RUN pip install --upgrade pip
+
+COPY requirements.txt .
+#RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Ref: https://airflow.apache.org/docs/docker-stack/recipes.html
@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 SHELL [ "/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c" ]
 
 ARG CLOUD_SDK_VERSION=322.0.0
-ENV GCLOUD_HOME=/home/drux/.google-cloud-sdk
+ENV GCLOUD_HOME=/home/google-cloud-sdk
 
 ENV PATH="${GCLOUD_HOME}/bin/:${PATH}"
 
