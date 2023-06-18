@@ -1,0 +1,112 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - histogram_for_load_data_1686944723837
+  - bar_chart_for_load_data_1686944807657
+  - transform_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load data
+  retry_config: null
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform data
+  retry_config: null
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - load_data
+  uuid: transform_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    data_provider: postgres
+    data_provider_profile: default
+    export_write_policy: replace
+    limit: 1000
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: sql
+  name: export data
+  retry_config: null
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - transform_data
+  uuid: export_data
+callbacks: []
+conditionals: []
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: ETL demo
+spark_config: {}
+type: python
+updated_at: '2023-06-16 19:53:36'
+uuid: etl_demo
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    group_by:
+    - rating
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: histogram for load_data 1686944723837
+  retry_config: null
+  status: executed
+  type: chart
+  upstream_blocks:
+  - load_data
+  uuid: histogram_for_load_data_1686944723837
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: vertical
+    chart_type: bar chart
+    group_by:
+    - user ID
+    metrics:
+    - aggregation: count_distinct
+      column: meal transaction ID
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: bar chart for load_data 1686944807657
+  retry_config: null
+  status: executed
+  type: chart
+  upstream_blocks:
+  - load_data
+  uuid: bar_chart_for_load_data_1686944807657

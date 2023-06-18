@@ -48,6 +48,8 @@ week_2_workflow_orchestration/etl_w_gcpn_prefect/yellow_tripdata_2021-01.parquet
 week_2_workflow_orchestration/etl_w_gcpn_prefect/.prefectignore
 week_2_workflow_orchestration/etl_w_gcpn_prefect/flows/.prefectignore
 week_2_workflow_orchestration/airflow/.env
+week_2_workflow_orchestration/mage/de_zoomcamp/io_config.yaml
+week_2_workflow_orchestration/mage/demo_project/io_config.yaml
 # Folders #
 ###########
 _venv/
@@ -77,4 +79,5 @@ week_2_workflow_orchestration/prefect/02_etl_w_gcp_n_prefect/data/
 week_2_workflow_orchestration/prefect/02_etl_w_gcp_n_prefect/homework/data/
 week_2_workflow_orchestration/prefect/01_prefect_intro/output.csv
 week_2_workflow_orchestration/prefect/data/
+week_2_workflow_orchestration/prefect/02_etl_w_gcp_n_prefect/flows/data/
 
